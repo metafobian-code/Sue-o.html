@@ -2,21 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Texto infinito para Roberto 😴</title>
+<title>Texto infinito 😴</title>
 <style>
-  body {
-    font-family: Georgia, serif;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    line-height: 1.6;
-    background: #f4f4f4;
-    color: #222;
-  }
-  p {
-    margin-bottom: 15px;
-    text-align: justify;
-  }
+  body { font-family: Georgia, serif; max-width: 800px; margin: 20px auto; padding: 20px; line-height: 1.6; background: #f4f4f4; color: #222; }
+  p { margin-bottom: 15px; text-align: justify; }
 </style>
 </head>
 <body>
@@ -28,12 +17,11 @@
 
   const contenedor = document.getElementById("contenedor");
 
-  // ⚠️ while infinito: agrega párrafos sin parar
-  while (true) {
+  setInterval(function() {
     const p = document.createElement("p");
     p.textContent = texto;
     contenedor.appendChild(p);
-  }
+  }, 500);
 </script>
 </body>
 </html>
